@@ -1,0 +1,841 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&family=Raleway:wght@700;800&display=swap');
+
+/* ===========================
+          Reset HMTL  
+   =========================== */
+
+*,
+*:after,
+*::before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:hover,
+:active,
+:focus {
+    outline: 0 !important;
+    outline-offset: 0;
+}
+
+a,
+a:hover {
+    text-decoration: none;
+}
+
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+}
+
+/* ===========================
+      Predefine Variables  
+   =========================== */
+
+:root {
+    --primary-color: #325662;
+    --secondry-color: #f7c17b;
+    --third-color: #355764;
+    --gray-color: #999;
+    --text-color: #1c1c1c;
+    --white-color: #ffffff;
+    --black-color: #000000;
+    --primary-font: 'Poppins', sans-serif;
+    --secondry-font: 'Raleway', sans-serif;
+}
+
+body {
+    font-family: var(--primary-font);
+    font-size: 100%;
+    font-weight: 400;
+}
+
+
+h1 {
+    font-family: var(--secondry-font);
+    font-size: 4.4rem;
+    font-weight: 700;
+    color: var(--white-color);
+    text-transform: capitalize;
+    line-height: 4.3rem;
+    margin-bottom: 0.6rem;
+}
+
+h2 {
+    font-family: var(--primary-font);
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 3rem;
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+}
+
+h4 {
+    font-family: var(--primary-font);
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 2rem;
+    color: #161616;
+    margin-bottom: 1.8rem;
+}
+
+
+h6 {
+    font-family: var(--primary-font);
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 2rem;
+    color: #dcdcd9;
+    margin-bottom: 1.8rem;
+}
+
+p {
+    font-family: var(--primary-font);
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--text-color);
+    letter-spacing: 1px;
+    line-height: 1.8rem;
+}
+
+.btn-main {
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 2rem;
+    padding: 0.25rem 2.525rem;
+    background-color: var(--secondry-color);
+    color: var(--white-color);
+    border: 0.125rem solid var(--secondry-color);
+    text-transform: capitalize;
+    box-shadow: 0px 2px 10px -1px rgba(0, 0, 0, 19%);
+    -webkit-transition: all .4s ease-out 0s;
+    -o-transition: all .4s ease-out 0s;
+    -moz-transition: all .4s ease-out 0s;
+    transition: all .4s ease-out 0s;
+}
+
+.btn-main:hover {
+    background-color: transparent;
+    color: var(--white-color);
+}
+
+.btn-buy {
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 2rem;
+    padding: 0.25rem 2.525rem;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    border: 0.125rem solid var(--primary-color);
+    text-transform: capitalize;
+    box-shadow: 0px 2px 10px -1px rgba(0, 0, 0, 19%);
+    -webkit-transition: all .4s ease-out 0s;
+    -o-transition: all .4s ease-out 0s;
+    -moz-transition: all .4s ease-out 0s;
+    transition: all .4s ease-out 0s;
+}
+
+.btn-buy:hover {
+    background-color: transparent;
+    color: var(--primary-color);
+}
+
+.wrapper {
+    padding-top: 7.25rem;
+    padding-bottom: 7.25rem;
+}
+
+.text-content {
+    width: 50%;
+    margin: auto;
+}
+
+.bg-cover {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.p-relative {
+    position: relative;
+}
+
+.align-item-center {
+    align-items: center !important;
+}
+
+/* ===========================
+      Header Design section  
+   =========================== */
+
+.nav-header .navbar {
+    margin: 0 2.325rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+}
+
+.nav-item .nav-link {
+    margin: 0 1.3rem;
+    color: var(--white-color);
+}
+
+.nav-item .nav-link.active {
+    color: var(--gray-color);
+}
+
+.navbar-nav .nav-item li:last-child {
+    margin: 0 0.325rem;
+    padding-right: 0rem;
+    padding-left: 0rem;
+}
+
+.fixed-top.scrolled {
+    background-color: #70A7A1 !important;
+    transition: background-color 200ms linear;
+}
+
+
+/* ===========================
+         slick slider  
+   =========================== */
+
+.main-slider .hero-slider-item {
+    padding: 0rem 10rem;
+}
+
+.overlay {
+    position: relative;
+}
+
+.overlay::before {
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: .8;
+}
+
+.hero-slider {
+    padding-bottom: 0;
+    padding-top: 10rem;
+}
+
+.hero-slider .prevArrow,
+.hero-slider .nextArrow {
+    position: absolute;
+    bottom: -123px;
+    z-index: 9;
+    padding: 15px;
+    color: rgba(255, 255, 255, 0.5);
+    border: 0;
+    font-size: 30px;
+    transition: all linear .2s;
+    background: transparent;
+}
+
+.hero-slider .prevArrow:focus,
+.hero-slider .nextArrow:focus {
+    outline: 0;
+}
+
+.hero-slider .prevArrow:hover,
+.hero-slider .nextArrow:hover {
+    color: var(--black-color);
+}
+
+.hero-slider .prevArrow {
+    right: 133px;
+}
+
+.hero-slider .nextArrow {
+    right: 60px;
+}
+
+.slider-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 58%;
+}
+
+.hero-slider-item p {
+    color: var(--white-color) !important;
+    font-family: var(--primary-font);
+    font-size: 1rem;
+    font-weight: 300;
+    color: var(--text-color);
+    letter-spacing: 1px;
+    line-height: 1.3rem;
+    margin-bottom: 1.5rem;
+}
+
+.hero-slider .slick-prev {
+    padding: 18px 28px;
+    background-color: var(--secondry-color);
+    border: none;
+    color: white;
+    font-size: 22px;
+}
+
+.hero-slider .slick-next {
+    padding: 18px 28px;
+    background-color: var(--primary-color);
+    border: none;
+    color: white;
+    font-size: 22px;
+}
+
+.hero-slider .prevArrow,
+.hero-slider .nextArrow {
+    position: absolute;
+    bottom: 200px;
+    transition: all linear .2s;
+}
+
+.hero-slider-item .slider-img::before {
+    position: absolute;
+    left: 33%;
+    content: 'BEST';
+    background-color: var(--secondry-color);
+    color: var(--primary-color);
+    height: 72px;
+    width: 72px;
+    border-radius: 50%;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    display: block;
+    padding: 22px 14px;
+
+}
+
+/* ===========================
+         Our Cycles  
+   =========================== */
+.our-cycle {
+    position: relative;
+}
+
+.product-wrapper .row {
+    height: 700px;
+    align-items: center;
+}
+
+.product-wrapper {
+    padding: 1rem 0;
+}
+
+.product-img {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+
+.product-img img {
+    align-items: center;
+    margin: 0 auto;
+    display: flex;
+}
+
+.product-img::before {
+    content: '';
+    height: 650px;
+    width: 550px;
+    background-color: var(--secondry-color);
+    clip-path: polygon(0 0, 64% 6%, 64% 75%, 0 100%);
+    position: absolute;
+    z-index: -1;
+    top: -140px;
+    left: -120px;
+}
+
+.product-img::after {
+    content: '01';
+    height: 60px;
+    width: 60px;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    position: absolute;
+    top: -12%;
+    right: 33%;
+    border-radius: 50%;
+    font-size: 15px;
+    font-weight: 400;
+    text-align: center;
+    display: block;
+    padding: 16px 16px;
+}
+
+.product-img2::before {
+    content: '';
+    height: 650px;
+    width: 550px;
+    background-color: var(--secondry-color);
+    clip-path: polygon(0 0, 64% 6%, 64% 75%, 0 100%);
+    position: absolute;
+    z-index: -1;
+    top: -100px;
+    left: 0px;
+}
+
+
+.product-img2::after {
+    content: '02';
+    height: 60px;
+    width: 60px;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    position: absolute;
+    top: -8%;
+    left: 48%;
+    border-radius: 50%;
+    font-size: 15px;
+    font-weight: 400;
+    text-align: center;
+    display: block;
+    padding: 16px 16px;
+}
+
+.product-img3::before {
+    content: '';
+    height: 650px;
+    width: 550px;
+    background-color: var(--secondry-color);
+    clip-path: polygon(0 0, 64% 6%, 64% 75%, 0 100%);
+    position: absolute;
+    z-index: -1;
+    top: -90px;
+    left: -20px;
+}
+
+.product-img3::after {
+    content: '03';
+    height: 60px;
+    width: 60px;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    position: absolute;
+    top: -3%;
+    right: 45%;
+    border-radius: 50%;
+    font-size: 15px;
+    font-weight: 400;
+    text-align: center;
+    display: block;
+    padding: 16px 16px;
+}
+
+.product-wrapper h2 {
+    text-align: left;
+    margin-bottom: 3rem;
+    padding-left: 14rem;
+    width: 510px;
+}
+
+.product-wrapper p {
+    margin-bottom: 3.5rem;
+}
+
+.product-wrapper h2::before {
+    content: '';
+    position: absolute;
+    background-color: var(--black-color);
+    width: 220px;
+    height: 1px;
+    top: 24px;
+    left: 0;
+}
+
+.pprice {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text-color);
+    float: right;
+    padding: .5rem 2rem;
+}
+
+.pprice span {
+    color: var(--secondry-color);
+}
+
+.pprice span:last-child {
+    color: var(--primary-color);
+}
+
+.btn-sm-section .btn-sm {
+    background-color: var(--secondry-color);
+    color: var(--white-color);
+    font-weight: 700;
+    font-size: 1.2rem;
+    padding: 1.5rem 6rem;
+    border-radius: 0.5rem;
+    border: none;
+    margin: 3rem 0;
+    border: 2px solid var(--secondry-color);
+}
+
+.btn-sm-section .btn-sm:hover {
+    border: 2px solid var(--primary-color);
+    background-color: var(--white-color);
+    color: var(--primary-color);
+    transition: all .3s ease-in-out;
+}
+
+
+/* ================================
+        about our cycle store  
+   ================================ */
+
+.about-ocs {
+    margin-bottom: 30%;
+}
+
+.about-ocs-section {
+    /* z-index: -999; */
+}
+
+.overlay1 {
+    position: relative;
+    z-index: -2;
+    height: 900px;
+}
+
+.overlay1::before {
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: var(--primary-color);
+    opacity: .9;
+    z-index: -9;
+}
+
+.about-ocs-section h2,
+.about-ocs-section p {
+    color: var(--white-color);
+}
+
+.about-ocs-section img {
+    margin: 10rem 0;
+}
+
+.about-ocs-img img {
+    padding: 1rem 3rem;
+}
+
+.about-ocs-img::before {
+    content: '';
+    height: 850px;
+    width: 720px;
+    background-color: var(--white-color);
+    clip-path: polygon(0 0, 100% 7%, 100% 75%, 0 100%);
+    position: absolute;
+    z-index: -1;
+    box-shadow: rgba(17, 17, 17, 0.9) 0px 48px 100px 0px;
+}
+
+/* ==================================
+            review section  
+   ================================== */
+
+.review {
+    position: relative;
+    clear: both;
+}
+
+.review .review-section h2 {
+    text-align: center;
+}
+
+.review .review-section .sayborder {
+    border: 1px dotted var(--gray-color);
+    border-radius: 5px;
+    background-color: rgb(201 201 201 / 23%);
+}
+
+.review-slider {
+    padding: 5rem;
+}
+
+.review-item {
+    display: flex;
+    align-items: center;
+    background-color: var(--white-color);
+    padding: 2rem;
+}
+
+.sayheading {
+    padding: 3rem 0 0 0;
+    margin-bottom: 0.1rem;
+}
+
+
+.review-slider .prevArrow,
+.review-slider .nextArrow {
+    position: absolute;
+    bottom: -33px;
+    z-index: 9;
+    padding: 15px;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 30px;
+    transition: all linear .2s;
+    background: transparent;
+}
+
+.review-slider .prevArrow:focus,
+.review-slider .nextArrow:focus {
+    outline: 0;
+}
+
+.review-slider .prevArrow:hover,
+.review-slider .nextArrow:hover {
+    color: var(--gray-color);
+}
+
+.review-slider .prevArrow {
+    right: 52.5%;
+    -ms-transform: translateX(-52.5%);
+    transform: translateX(-52.5%);
+}
+
+.review-slider .nextArrow {
+    right: 47%;
+    -ms-transform: translateX(-47%);
+    transform: translateX(-47%);
+}
+
+.review-slider .slick-prev {
+    padding: 18px 28px;
+    background-color: var(--black-color);
+    border: none;
+    color: white;
+    font-size: 22px;
+}
+
+.review-slider .slick-next {
+    padding: 18px 28px;
+    background-color: var(--secondry-color);
+    border: none;
+    color: white;
+    font-size: 22px;
+}
+
+.review-slider .slick-dots {
+    display: none !important;
+}
+
+.review-item .fas {
+    font-size: 2rem;
+    color: var(--secondry-color);
+    margin-bottom: 1rem;
+}
+
+.review-item p {
+    margin-bottom: 1.8rem;
+}
+
+.review-item h5 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #1d1f1e;
+}
+
+/* =============================
+           News Section 
+   ============================= */
+
+.news {
+    background-color: var(--third-color);
+}
+
+.news-section .newspara p,
+.news-section .newspara h2 {
+    color: var(--white-color);
+}
+
+.news-section .newspara p {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.news-section .card {
+    border: none;
+}
+
+.news-section .card .card-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.news-section .card .card-text {
+    letter-spacing: 0px;
+}
+
+.news-section .card .card-subtitle span {
+    float: right;
+}
+
+.news-section .card .card-subtitle {
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+.news-section .card-section {
+    margin-top: 6rem;
+}
+
+/* =============================
+        call back Section 
+   ============================= */
+
+.call-back {
+    background-color: var(--third-color);
+}
+
+.call-back h2 {
+    color: var(--white-color);
+}
+
+.btn-sent {
+    background-color: var(--secondry-color);
+    color: var(--white-color);
+    font-weight: 400;
+    font-size: 1.4rem;
+    padding: 1.4rem 5.5rem;
+    border-radius: 2rem;
+    border: 2px solid var(--secondry-color);
+    transition: all .3s ease-in-out;
+}
+
+.btn-sent:hover {
+    background-color: transparent;
+}
+
+.call-back-section.wrapper {
+    padding-bottom: 0px;
+}
+
+.call-back-section .form-control {
+    display: block;
+    width: 100%;
+    padding: 1.325rem 1.6rem;
+    font-size: 1.1rem;
+    font-weight: 400;
+    line-height: 2rem;
+    color: #0c0c0c;
+    margin-bottom: 1.8rem;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(196, 196, 196, 0.268);
+    border-radius: 1rem;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+/* =======================
+        map section
+   ======================= */
+.map {
+    margin-top: 10rem;
+}
+
+.maparea {
+    filter: grayscale(100%);
+}
+
+/* =======================
+        footer section
+   ======================= */
+
+.footer {
+    padding: 1rem;
+}
+
+.footer .footer-communication h5 a {
+    color: var(--white-color);
+    padding-right: 1rem;
+}
+
+.footer .footer-communication h5 {
+    color: var(--white-color);
+    font-size: 1rem;
+    font-weight: 400;
+    margin: .5rem;
+}
+
+.footer .footer-social {
+    padding: 1rem 0;
+}
+
+.footer .footer-social a {
+    color: var(--white-color);
+    font-size: 1.4rem;
+    padding: .1rem;
+}
+
+.footer .subs .form-control {
+    display: block;
+    width: 50%;
+    padding: 1rem 1.3rem;
+    font-size: 1.1rem;
+    font-weight: 400;
+    line-height: 2rem;
+    color: #0c0c0c;
+    margin-bottom: 1.8rem;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(196, 196, 196, 0.268);
+    border-radius: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.footer .subs .btn-subs {
+    display: inline-block;
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 2rem;
+    padding: 0.45rem 4.525rem;
+    background-color: var(--secondry-color);
+    color: var(--white-color);
+    border: 0.125rem solid var(--secondry-color);
+    text-transform: uppercase;
+    box-shadow: 0px 2px 10px -1px rgb(0 0 0 / 19%);
+    -webkit-transition: all .4s ease-out 0s;
+    -o-transition: all .4s ease-out 0s;
+    -moz-transition: all .4s ease-out 0s;
+    transition: all .4s ease-out 0s;
+}
+
+.footer .subs .btn-subs:hover {
+    background-color: transparent;
+    color: var(--white-color);
+}
+
+.footer-copyright {
+    background-color: var(--white-color);
+
+}
+
+.footer-copyright p {
+    padding-top: 1rem;
+    font-size: 1rem;
+
+}
