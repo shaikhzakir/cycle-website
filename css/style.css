@@ -500,13 +500,9 @@ p {
     margin-bottom: 30%;
 }
 
-.about-ocs-section {
-    /* z-index: -999; */
-}
-
 .overlay1 {
     position: relative;
-    z-index: -2;
+    z-index: 0;
     height: 900px;
 }
 
@@ -519,7 +515,7 @@ p {
     left: 0;
     background-color: var(--primary-color);
     opacity: .9;
-    z-index: -9;
+    z-index: -3;
 }
 
 .about-ocs-section h2,
@@ -529,6 +525,9 @@ p {
 
 .about-ocs-section img {
     margin: 10rem 0;
+}
+.about-ocs-img{
+    filter: drop-shadow(-1px 6px 5px rgba(50, 50, 0, 0.5));
 }
 
 .about-ocs-img img {
